@@ -1,31 +1,32 @@
 <?php
 
-$carro1 = [
-    'modelo' => 'Argo',
-    'marca' => 'Fiat'    
+$carros = [
+    'ABC-1598' => [
+        'modelo' => 'Argo',
+        'marca' => 'Fiat'    
+    ], 
+    'CYW-3719' => [
+        'modelo' => 'i30',
+        'marca' => 'Hyundai'
+    ], 
+    'KWA-7939' => [
+        'modelo' => 'Civic',
+        'marca' => 'Honda'
+    ], 
+    'DXC-5793' => [
+        'modelo' => 'X1',
+        'marca' => 'BMW'
+    ]
 ];
 
-$carro2 = [
-    'modelo' => 'i30',
-    'marca' => 'Hyundai'
+$carros['GFQ'] = [ //adicionando itens
+    'marca' => 'Chevrolet',
+    'modelo' => 'Prisma'
 ];
 
-$carro3 = [
-    'modelo' => 'Civic',
-    'marca' => 'Honda'
-];
-
-$carro4 = [
-    'modelo' => 'X1',
-    'marca' => 'BMW'
-];
-
-$carros = [$carro1, $carro2, $carro3, $carro4];
-
-for ($i = 0; $i < count($carros); $i++) {
-    echo $carros[$i] ['modelo'] . PHP_EOL; 
+foreach ($carros as $placa => $carro) {
+    echo "Placa: $placa" . PHP_EOL;
+    echo "Marca: " . $carro ['marca'] . PHP_EOL;
+    echo "Modelo: " . $carro ['modelo'] . PHP_EOL;
+    echo PHP_EOL;
 }
-
-/*for ($i = 0; $i < count($carros); $i++) {
-    echo $carros[$i] ['modelo'] . ' - ' . $carros[$i] ['marca'] . PHP_EOL; 
-}*/
