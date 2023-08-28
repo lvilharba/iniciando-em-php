@@ -26,7 +26,7 @@ function depositar(array $conta, float $valorDoDeposito): array
     return $conta;
 }
 
-function titularComLetraMaiuscula(array &$conta)
+function titularComLetraMaiuscula(array &$conta) //testando criar uma função passando a variável por referência
 {
     $conta['titular'] = strtoupper($conta['titular']);
 }
