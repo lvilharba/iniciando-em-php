@@ -1,39 +1,39 @@
 <?php
 
-//treinando arrays associativos
+//treinando arrays associativos e foreach
 
-$tenis1 = [
-    'modelo' => 'Fórum Low', 
-    'marca' => 'Adidas'
+$tenisList = [
+    '1234' => [
+        'modelo' => 'Fórum Low', 
+        'marca' => 'Adidas'
+    ],
+
+    '1115' => [
+        'modelo' => 'Air Force 1',
+        'marca' => 'Nike'
+    ],
+
+    '3957' => [
+        'modelo' => '550',
+        'marca' => 'New Balance'
+    ],
+
+    '7615' => [
+        'modelo' => 'Suede',
+        'marca' => 'Puma'
+    ],
+
+    '1753' => [
+        'modelo' => 'Air Jordan 11',
+        'marca' => 'Nike'
+    ],
+
+    '5501' => [
+        'modelo' => 'Haiwee',
+        'marca' => 'Adidas'
+    ]
 ];
 
-$tenis2 = [
-    'modelo' => 'Air Force 1',
-    'marca' => 'Nike'
-];
-
-$tenis3 = [
-    'modelo' => '550',
-    'marca' => 'New Balance'
-];
-
-$tenis4 = [
-    'modelo' => 'Suede',
-    'marca' => 'Puma'
-];
-
-$tenis5 = [
-    'modelo' => 'Air Jordan 11',
-    'marca' => 'Nike'
-];
-
-$tenis6 = [
-    'modelo' => 'Haiwee',
-    'marca' => 'Adidas'
-];
-
-$tenisList = [$tenis1, $tenis2, $tenis3, $tenis4, $tenis5, $tenis6];
-
-for ($i = 0; $i < count($tenisList); $i++) {
-    echo "{$tenisList[$i] ['marca']} - {$tenisList[$i] ['modelo']}" . PHP_EOL;
+foreach ($tenisList as $numSerie => $tenis) {
+    echo "$numSerie - {$tenis['marca']} - {$tenis['modelo']}" . PHP_EOL;
 }
